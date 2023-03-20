@@ -1,0 +1,120 @@
+/* ==UserStyle==
+@name         YouTube Fresh CSS
+@description  UserCSS example
+@namespace    https://github.com/BanHammerYKT
+@author       BanHammer
+@version      1.1.0
+@license      MIT
+@preprocessor stylus
+@var checkbox viewedHome "Videos on the Home page" 1
+@var checkbox viewedSubscription "Videos on the Subscriptions page" 1
+@var checkbox viewedRecommendation "Videos in the recommendation sidebar" 1
+@var checkbox viewedHomeTab "Videos in the HOME tab of a channel" 1
+@var checkbox viewedHistory "Videos on the History page" 0
+@var checkbox viewedPlaylistPage "Videos on a playlist page" 0
+@var checkbox viewedPlaylistPanel "Videos in a playlist panel" 0
+@var checkbox viewedSearch "Videos in a search result" 0
+@var checkbox shortsChannel "Shorts on the Home page & SHORTS tab of a channel" 1
+@var checkbox shortsHome "Shorts panel on the Home page" 1
+@var checkbox shortsSearch "Shorts in a search result" 1
+@var checkbox shortsSubscription "Shorts on the Subscriptions page" 1
+@var checkbox shortsRecommendation "Shorts in the recommendation sidebar" 1
+@var checkbox mixesHome "Mixes on the Home page" 1
+@var checkbox mixesRecommendation "Mixes in the recommendation sidebar" 1
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+    if viewedSubscription {
+        ytd-grid-video-renderer.style-scope.ytd-grid-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedHome {
+        ytd-rich-item-renderer.style-scope.ytd-rich-grid-row:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedRecommendation {
+        ytd-compact-video-renderer.style-scope.ytd-item-section-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedHomeTab {
+        ytd-grid-video-renderer.style-scope.yt-horizontal-list-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedHistory {
+        ytd-video-renderer.style-scope.ytd-item-section-renderer[is-history]:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedPlaylistPage {
+        ytd-playlist-video-renderer.style-scope.ytd-playlist-video-list-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedPlaylistPanel {
+        ytd-playlist-panel-video-renderer.style-scope.ytd-playlist-panel-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if viewedSearch {
+        ytd-video-renderer.style-scope.ytd-vertical-list-renderer:has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+
+        ytd-video-renderer.style-scope.ytd-item-section-renderer:not([is-history]):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+            display: none !important;
+        }
+    }
+
+    if shortsSearch {
+        ytd-reel-item-renderer.style-scope.yt-horizontal-list-renderer:has(a[href^="/shorts"]) {
+            display: none !important;
+        }
+    }
+
+    if shortsChannel {
+        ytd-rich-grid-slim-media.style-scope.ytd-rich-item-renderer[is-short] {
+            display: none !important;
+        }
+    }
+
+    if shortsHome {
+        ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer[is-shorts] {
+            display: none !important;
+        }
+    }
+
+    if shortsRecommendation {
+        ytd-compact-video-renderer.style-scope.ytd-item-section-renderer:has([overlay-style="SHORTS"]) {
+            display: none !important;
+        }
+    }
+
+    if shortsSubscription {
+        ytd-rich-item-renderer.style-scope.ytd-rich-grid-row:has([overlay-style="SHORTS"]) {
+            display: none !important;
+        }
+    }
+
+    if mixesHome {
+        ytd-rich-item-renderer.style-scope.ytd-rich-grid-row:has(a[href*="start_radio"]) {
+            display: none !important;
+        }
+    }
+
+    if mixesRecommendation {
+        ytd-compact-radio-renderer.style-scope.ytd-item-section-renderer:has(a[href*="start_radio"]) {
+            display: none !important;
+        }
+    }
+}
