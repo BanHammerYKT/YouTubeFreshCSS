@@ -3,9 +3,9 @@
 @description  UserCSS that hides watched videos from YouTube
 @namespace    https://github.com/BanHammerYKT
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
-@updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/dev/YouTubeFreshCSS.css
+@updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.css
 @author       BanHammer
-@version      2.0.3
+@version      2.0.4
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
