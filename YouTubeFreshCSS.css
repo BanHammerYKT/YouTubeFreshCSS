@@ -1,7 +1,9 @@
 /* ==UserStyle==
-@name         YouTube Fresh CSS
-@description  UserCSS example
+@name         YouTube Fresh CSS+
+@description  UserCSS that hides watched videos from YouTube
 @namespace    https://github.com/BanHammerYKT
+@homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
+@updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/dev/YouTubeFreshCSS.css
 @author       BanHammer
 @version      1.1.0
 @license      MIT
@@ -15,7 +17,79 @@
             display: none !important;
         }
 
+        ytd-mini-guide-renderer ytd-mini-guide-entry-renderer:has(a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]) {
+            display: none !important;
+        }
+
         ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-search ytd-video-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-watch-next-secondary-results-renderer ytd-shelf-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="trending"] ytd-video-renderer:has(.ytd-thumbnail[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-notification-renderer:has(> a[href^="/shorts/"]) {
+            display: none !important;
+        }
+
+        ytd-rich-shelf-renderer[is-shorts] {
+            display: none !important;
+        }
+
+        ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts].ytd-rich-section-renderer) {
+            display: none !important;
+        }
+
+        ytd-reel-shelf-renderer {
+            display: none !important;
+        }
+
+        ytm-reel-shelf-renderer {
+            display: none !important;
+        }
+
+        ytm-pivot-bar-renderer ytm-pivot-bar-item-renderer:has(div.pivot-shorts) {
+            display: none !important;
+        }
+
+        ytm-browse ytm-item-section-renderer ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]) {
+            display: none !important;
+        }
+
+        ytm-browse ytm-item-section-renderer ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]) {
+            display: none !important;
+        }
+
+        ytm-search ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]) {
+            display: none !important;
+        }
+
+        ytm-search ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]) {
             display: none !important;
         }
     }
