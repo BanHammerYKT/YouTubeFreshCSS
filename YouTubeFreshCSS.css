@@ -5,11 +5,12 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/dev/YouTubeFreshCSS.css
 @author       BanHammer
-@version      2.0.0
+@version      2.0.1
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
 @var checkbox shortVideos "Shorts" 1
+@var checkbox mixVideos "Mixes & Radio" 1
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
@@ -125,6 +126,32 @@
         }
 
         ytm-search ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]) {
+            display: none !important;
+        }
+    }
+
+    if mixVideos {
+        ytd-browse ytd-rich-item-renderer:has(#video-title-link[href*="&start_radio=1"]) {
+            display: none !important;
+        }
+
+        ytd-search ytd-radio-renderer {
+            display: none !important;
+        }
+
+        ytd-watch-next-secondary-results-renderer ytd-compact-radio-renderer {
+            display: none !important;
+        }
+
+        ytd-player div.videowall-endscreen a[data-is-list=true] {
+            display: none !important;
+        }
+
+        ytm-browse ytm-rich-item-renderer:has(ytm-radio-renderer) {
+            display: none !important;
+        }
+
+        ytm-search ytm-compact-radio-renderer {
             display: none !important;
         }
     }
