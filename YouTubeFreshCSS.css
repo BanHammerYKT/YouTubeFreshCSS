@@ -5,12 +5,13 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/dev/YouTubeFreshCSS.css
 @author       BanHammer
-@version      2.0.1
+@version      2.0.2
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
 @var checkbox shortVideos "Shorts" 1
 @var checkbox mixVideos "Mixes & Radio" 1
+@var checkbox upcomingVideos "Upcoming videos" 1
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
@@ -152,6 +153,20 @@
         }
 
         ytm-search ytm-compact-radio-renderer {
+            display: none !important;
+        }
+    }
+
+    if upcomingVideos {
+        ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]) {
+            display: none !important;
+        }
+
+        ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]) {
             display: none !important;
         }
     }
