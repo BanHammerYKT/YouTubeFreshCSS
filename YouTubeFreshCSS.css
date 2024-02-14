@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.css
 @author       BanHammer
-@version      2.0.4
+@version      2.1.0
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -17,35 +17,35 @@
 
 @-moz-document domain("youtube.com") {
     if watchedVideos {
-        ytd-browse[page-subtype="home"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="home"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="channels"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="channels"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="channels"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="channels"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
-        ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress[style*="width: 90%"], #progress[style*="width: 91%"], #progress[style*="width: 92%"], #progress[style*="width: 93%"], #progress[style*="width: 94%"], #progress[style*="width: 95%"], #progress[style*="width: 96%"], #progress[style*="width: 97%"], #progress[style*="width: 98%"], #progress[style*="width: 99%"], #progress[style*="width: 100%"]) {
+        ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
     }
