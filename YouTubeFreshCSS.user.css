@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.user.css
 @author       BanHammer
-@version      2.1.4
+@version      2.1.5
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -146,6 +146,10 @@
 
     if mixVideos {
         ytd-browse ytd-rich-item-renderer:has(#video-title-link[href*="&start_radio=1"]) {
+            display: none !important;
+        }
+
+        ytd-browse ytd-rich-item-renderer:has(.yt-lockup-metadata-view-model-wiz__title[href*="&start_radio=1"]) {
             display: none !important;
         }
 
