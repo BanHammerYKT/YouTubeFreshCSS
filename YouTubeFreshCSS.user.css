@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.user.css
 @author       BanHammer
-@version      2.1.7
+@version      2.1.8
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -20,11 +20,11 @@
         ytd-browse[page-subtype="home"] ytd-grid-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
-    
+
         ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
-                
+
         ytd-browse[page-subtype="home"] ytd-grid-video-renderer:has(yt-thumbnail-overlay-progress-bar-view-model):has(div:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
@@ -53,7 +53,13 @@
             display: none !important;
         }
 
+        /* right pane */
         ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
+            display: none !important;
+        }
+
+        /* right pane */
+        ytd-watch-next-secondary-results-renderer yt-lockup-view-model:has(yt-thumbnail-overlay-progress-bar-view-model):has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
     }
@@ -201,7 +207,7 @@
             display: none !important;
         }
     }
-    
+
     /* ads */
     ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(#info-container) {
         display: none !important;
