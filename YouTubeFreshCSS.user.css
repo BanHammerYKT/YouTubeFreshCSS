@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.user.css
 @author       BanHammer
-@version      2.2.2
+@version      2.2.3
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -260,6 +260,14 @@
 
     /* ads */
     ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(#info-container) {
+        display: none !important;
+    }
+    
+    ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(ytd-ad-slot-renderer) {
+        display: none !important;
+    }
+    
+    #masthead-ad {
         display: none !important;
     }
 }
