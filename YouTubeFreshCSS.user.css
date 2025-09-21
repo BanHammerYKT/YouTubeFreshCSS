@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.user.css
 @author       BanHammer
-@version      2.2.4
+@version      2.2.5
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -51,6 +51,10 @@
         }
 
         ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(ytd-thumbnail-overlay-resume-playback-renderer):has(#progress:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
+            display: none !important;
+        }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment:not([style*=" 9%"]):is([style*=" 9"], [style*=" 100"])) {
             display: none !important;
         }
 
@@ -202,6 +206,10 @@
         ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-item-section-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]) {
             display: none !important;
         }
+
+        ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has(lockup-attachments-view-model) {
+            display: none !important;
+        }
     }
 
     if homePageCleanup {
@@ -258,6 +266,11 @@
 
         /* right pane */
         ytd-watch-next-secondary-results-renderer yt-lockup-view-model:has(.badge-style-type-members-only) {
+            display: none !important;
+        }
+
+        /* right pane */
+        ytd-watch-next-secondary-results-renderer yt-lockup-view-model:has(.yt-badge-shape--commerce) {
             display: none !important;
         }
     }
