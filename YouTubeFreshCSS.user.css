@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/BanHammerYKT/YouTubeFreshCSS
 @updateURL    https://raw.githubusercontent.com/BanHammerYKT/YouTubeFreshCSS/master/YouTubeFreshCSS.user.css
 @author       BanHammer
-@version      2.2.9
+@version      2.2.10
 @license      MIT
 @preprocessor stylus
 @var checkbox watchedVideos "Watched videos [>=90%]" 1
@@ -226,15 +226,22 @@
     }
 
     if homePageCleanup {
+		/* other themes section */
         ytd-browse[page-subtype="home"] ytd-rich-section-renderer:not(:has(ytd-feed-nudge-renderer)) {
             display: none !important;
         }
 
+		/* mixes */
         ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(#view-more>a[href^="/playlist"]) {
             display: none !important;
         }
 
         ytd-rich-section-renderer:has(ytd-rich-item-renderer[is-post].ytd-rich-shelf-renderer) {
+            display: none !important;
+        }
+		
+		/* sponsored/recommended videos */
+        ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(.ytContentMetadataViewModelBadge) {
             display: none !important;
         }
     }
